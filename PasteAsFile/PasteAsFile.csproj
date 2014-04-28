@@ -92,6 +92,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\PasteAsFile.exe" />
     <Content Include="icon.ico" />
     <Content Include="screenshot.png" />
   </ItemGroup>
