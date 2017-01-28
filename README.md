@@ -14,8 +14,8 @@ Paste As File
 ### Screenshot of the Application
 ![Paste As File](https://raw.githubusercontent.com/EslaMx7/PasteAsFile/master/PasteAsFile/screenshot.png)
 
-## [Download Now](https://github.com/EslaMx7/PasteAsFile/raw/master/PasteAsFile/bin/Debug/PasteAsFile.exe) (162KB)
+## [Download Now](https://goo.gl/aBlfYQ) (162KB)
 
 ----------------
 + .NET Framework 4.5 Required
-+ Tested On My Machine (Windows 8.1)
++ Tested On My Machine (Windows 10)
