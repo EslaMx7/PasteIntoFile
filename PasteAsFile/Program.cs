@@ -43,11 +43,11 @@ namespace PasteAsFile
         {
             try
             {
-                var key = Registry.ClassesRoot.OpenSubKey("Directory").OpenSubKey("Background").OpenSubKey("shell",true);
-                key.DeleteSubKeyTree("Paste As File");
+				var key = OpenDirectoryKey().OpenSubKey(@"Background\shell", true);
+				key.DeleteSubKeyTree("Paste As File");
 
-                key = Registry.ClassesRoot.OpenSubKey("Directory").OpenSubKey("shell", true);
-                key.DeleteSubKeyTree("Paste As File");
+				key = OpenDirectoryKey().OpenSubKey("shell", true);
+				key.DeleteSubKeyTree("Paste As File");
 
                 MessageBox.Show("Application has been Unregistered from your system", "Paste As File", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -63,12 +63,12 @@ namespace PasteAsFile
         {
             try
             {
-                var key = Registry.ClassesRoot.OpenSubKey("Directory").OpenSubKey("Background").OpenSubKey("shell",true).CreateSubKey("Paste As File");
-                key = key.CreateSubKey("command");
+				var key = OpenDirectoryKey().CreateSubKey(@"Background\shell").CreateSubKey("Paste As File");
+				key = key.CreateSubKey("command");
                 key.SetValue("", Application.ExecutablePath + " \"%V\"");
 
-                key = Registry.ClassesRoot.OpenSubKey("Directory").OpenSubKey("shell",true).CreateSubKey("Paste As File");
-                key = key.CreateSubKey("command");
+				key = OpenDirectoryKey().CreateSubKey("shell").CreateSubKey("Paste As File");
+				key = key.CreateSubKey("command");
                 key.SetValue("", Application.ExecutablePath + " \"%1\"");
                 MessageBox.Show("Application has been registered with your system", "Paste As File", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -100,5 +100,10 @@ namespace PasteAsFile
             }
             Application.Exit();
         }
-    }
+
+		static RegistryKey OpenDirectoryKey()
+		{
+			return Registry.CurrentUser.CreateSubKey(@"Software\Classes\Directory");
+		}
+	}
 }

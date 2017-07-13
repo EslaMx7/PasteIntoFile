@@ -33,8 +33,8 @@ namespace PasteAsFile
             txtFilename.Text = DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss");
             txtCurrentLocation.Text = CurrentLocation ?? @"C:\";
 
-            if (Registry.GetValue(@"HKEY_CLASSES_ROOT\Directory\Background\shell\Paste As File\command", "", null) == null)
-            {
+			if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Paste As File\command", "", null) == null)
+			{
                 if (MessageBox.Show("Seems that you are running this application for the first time,\nDo you want to Register it with your system Context Menu ?", "Paste As File", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Program.RegisterApp();
