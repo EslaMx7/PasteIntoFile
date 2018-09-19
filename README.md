@@ -1,4 +1,4 @@
-Paste As File
+Paste Into File
 ===========
 
 ###Desktop Application to Paste Clipboard Contents into Files
