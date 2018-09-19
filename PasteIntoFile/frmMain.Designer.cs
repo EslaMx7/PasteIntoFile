@@ -53,13 +53,13 @@
             this.lblType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(40, 17);
-            this.lblType.TabIndex = 0;
+            this.lblType.TabIndex = 6;
             this.lblType.Text = "Type";
             // 
             // imgContent
             // 
             this.imgContent.Location = new System.Drawing.Point(275, 290);
-            this.imgContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgContent.Margin = new System.Windows.Forms.Padding(4);
             this.imgContent.Name = "imgContent";
             this.imgContent.Size = new System.Drawing.Size(161, 100);
             this.imgContent.TabIndex = 2;
@@ -68,7 +68,7 @@
             // txtContent
             // 
             this.txtContent.Location = new System.Drawing.Point(16, 290);
-            this.txtContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContent.Margin = new System.Windows.Forms.Padding(4);
             this.txtContent.Multiline = true;
             this.txtContent.Name = "txtContent";
             this.txtContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -88,10 +88,11 @@
             // txtFilename
             // 
             this.txtFilename.Location = new System.Drawing.Point(21, 37);
-            this.txtFilename.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFilename.Margin = new System.Windows.Forms.Padding(4);
             this.txtFilename.Name = "txtFilename";
             this.txtFilename.Size = new System.Drawing.Size(244, 22);
-            this.txtFilename.TabIndex = 5;
+            this.txtFilename.TabIndex = 1;
+            this.txtFilename.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilename_KeyPress);
             // 
             // lblExt
             // 
@@ -123,19 +124,19 @@
             "gif",
             "ico"});
             this.comExt.Location = new System.Drawing.Point(316, 37);
-            this.comExt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comExt.Margin = new System.Windows.Forms.Padding(4);
             this.comExt.Name = "comExt";
             this.comExt.Size = new System.Drawing.Size(96, 24);
-            this.comExt.TabIndex = 7;
+            this.comExt.TabIndex = 2;
             // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.btnSave.Location = new System.Drawing.Point(144, 117);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(180, 37);
-            this.btnSave.TabIndex = 8;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -143,10 +144,10 @@
             // txtCurrentLocation
             // 
             this.txtCurrentLocation.Location = new System.Drawing.Point(21, 89);
-            this.txtCurrentLocation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCurrentLocation.Margin = new System.Windows.Forms.Padding(4);
             this.txtCurrentLocation.Name = "txtCurrentLocation";
             this.txtCurrentLocation.Size = new System.Drawing.Size(339, 22);
-            this.txtCurrentLocation.TabIndex = 10;
+            this.txtCurrentLocation.TabIndex = 3;
             this.txtCurrentLocation.Text = "D:\\";
             // 
             // label1
@@ -162,10 +163,10 @@
             // btnBrowseForFolder
             // 
             this.btnBrowseForFolder.Location = new System.Drawing.Point(369, 86);
-            this.btnBrowseForFolder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBrowseForFolder.Margin = new System.Windows.Forms.Padding(4);
             this.btnBrowseForFolder.Name = "btnBrowseForFolder";
             this.btnBrowseForFolder.Size = new System.Drawing.Size(44, 28);
-            this.btnBrowseForFolder.TabIndex = 11;
+            this.btnBrowseForFolder.TabIndex = 4;
             this.btnBrowseForFolder.Text = "...";
             this.btnBrowseForFolder.UseVisualStyleBackColor = true;
             this.btnBrowseForFolder.Click += new System.EventHandler(this.btnBrowseForFolder_Click);
@@ -203,7 +204,7 @@
             this.lblHelp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHelp.Name = "lblHelp";
             this.lblHelp.Size = new System.Drawing.Size(18, 21);
-            this.lblHelp.TabIndex = 14;
+            this.lblHelp.TabIndex = 8;
             this.lblHelp.Text = "?";
             this.lblHelp.Click += new System.EventHandler(this.lblHelp_Click);
             // 
@@ -228,7 +229,7 @@
             this.Controls.Add(this.lblType);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
