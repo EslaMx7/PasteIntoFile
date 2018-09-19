@@ -12,7 +12,7 @@ Paste As File
 + to manually `Register` it use this argument : **`/reg`**
 
 ### Screenshot of the Application
-![Paste As File](https://raw.githubusercontent.com/EslaMx7/PasteAsFile/master/PasteAsFile/screenshot.png)
+![Paste As File](https://raw.githubusercontent.com/EslaMx7/PasteIntoFiles/master/PasteIntoFile/screenshot.png)
 
 ## [Download Now](https://goo.gl/aBlfYQ) (162KB)
 
