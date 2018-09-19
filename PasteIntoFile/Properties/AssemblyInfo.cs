@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PasteAsFile")]
-[assembly: AssemblyDescription("Paste Clipboard Contents into Files")]
+[assembly: AssemblyTitle("PasteIntoFile")]
+[assembly: AssemblyDescription("Paste Clipboard Contents Into Files")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EslaMxSoft 2014")]
-[assembly: AssemblyProduct("PasteAsFile v1")]
+[assembly: AssemblyProduct("PasteIntoFile v1.1")]
 [assembly: AssemblyCopyright("Copyright © EslaMxSoft 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasteAsFile", "PasteAsFile\PasteAsFile.csproj", "{F6F4215C-6CD7-4279-9C4C-C2DA9A823D0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasteIntoFile", "PasteIntoFile\PasteIntoFile.csproj", "{F6F4215C-6CD7-4279-9C4C-C2DA9A823D0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B728565-6179-4368-8BFE-694F0F5F55BA}
 	EndGlobalSection
 EndGlobal
