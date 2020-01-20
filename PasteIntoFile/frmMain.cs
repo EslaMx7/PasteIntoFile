@@ -30,7 +30,12 @@ namespace PasteAsFile
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
-            txtFilename.Text = DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss");
+            string filename = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\filename", "", null);
+            if (filename == null)
+            {
+                filename = "dd-MM-yyyy HH-mm-ss";
+            }
+            txtFilename.Text = DateTime.Now.ToString(filename);
             txtCurrentLocation.Text = CurrentLocation ?? @"C:\";
 
             if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Paste Into File\command", "", null) == null)
@@ -134,6 +139,7 @@ namespace PasteAsFile
             string msg = "Paste Into File helps you paste any text or images in your system clipboard into a file directly instead of creating new file yourself";
             msg += "\n--------------------\nTo Register the application to your system Context Menu run the program as Administrator with this argument : /reg";
             msg += "\nto Unregister the application use this argument : /unreg\n";
+            msg += "\nTo change the format of the default filename, use this argument: /filename yyyy-MM-dd_HHmm\n";
             msg += "\n--------------------\nSend Feedback to : eslamx7@gmail.com\n\nThanks :)";
             MessageBox.Show(msg, "Paste As File Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

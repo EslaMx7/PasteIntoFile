@@ -10,6 +10,7 @@ Paste Into File
 + Shortcut in Context Menu (Right Click)
 + to `Unregister` the application and remove the Context Menu Shortcut from your system run the command line as Administrator and run the application with this argument : **`/unreg`**
 + to manually `Register` it use this argument : **`/reg`**
++ to change default filename format ("dd-MM-yyyy HH-mm-ss") use for example: **`/filename yyyy-MM-dd_HHmm`** (for more information on the format specifiers, see [Custom date and time format strings](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings)
 
 ### Screenshot of the Application
 ![Paste As File](https://raw.githubusercontent.com/EslaMx7/PasteIntoFiles/master/PasteIntoFile/screenshot.png)
