@@ -88,10 +88,12 @@ namespace PasteAsFile
 			try
 			{
 				var key = OpenDirectoryKey().CreateSubKey(@"Background\shell").CreateSubKey("Paste Into File");
+				key.SetValue("Icon", "\"" + Application.ExecutablePath + "\",0");
 				key = key.CreateSubKey("command");
 				key.SetValue("" , "\"" + Application.ExecutablePath + "\" \"%V\"");
 
 				key = OpenDirectoryKey().CreateSubKey("shell").CreateSubKey("Paste Into File");
+				key.SetValue("Icon", "\"" + Application.ExecutablePath + "\",0");
 				key = key.CreateSubKey("command");
 				key.SetValue("" , "\"" + Application.ExecutablePath + "\" \"%1\"");
 				MessageBox.Show("Application has been registered with your system", "Paste Into File", MessageBoxButtons.OK, MessageBoxIcon.Information);
