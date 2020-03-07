@@ -20,7 +20,7 @@ choco install pasteintofile
 
 ## Usage
 
-1. Right click in the folder where you want to create the file and choose the *Paste into file* entry from the context menu:<br/>
+1. Right click in the folder where you want to create the file and choose the *Paste into file* entry from the context menu:
 
    ![Paste As File](PasteIntoFile/menu.png)
    <br/>
