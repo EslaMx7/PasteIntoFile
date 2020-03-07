@@ -20,15 +20,13 @@ choco install pasteintofile
 
 ## Usage
 
-1. Right click in the folder where you want to create the file and choose the *Paste into file* entry from the context menu:
+1. Right click in the folder where you want to create the file and choose the *Paste into file* entry from the context menu:<br/>
 
    ![Paste As File](PasteIntoFile/menu.png)
-   *File Explorer context menu entry*
    <br/>
 
-1. Choose the filename, extenstion and location, the press the *Save* button:
+1. Choose the filename, extenstion and location, the press the *Save* button:<br/>
    ![Paste As File](PasteIntoFile/screenshot.png)
-   *Application screenshot*
 
 ## Configuration
 
