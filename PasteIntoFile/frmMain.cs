@@ -32,10 +32,6 @@ namespace PasteAsFile
         private void frmMain_Load(object sender, EventArgs e)
         {
             string filename = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\filename", "", null) ?? DEFAULT_FILENAME_FORMAT;
-            if (filename == null)
-            {
-                filename = "dd-MM-yyyy HH-mm-ss";
-            }
             txtFilename.Text = DateTime.Now.ToString(filename);
             txtCurrentLocation.Text = CurrentLocation ?? @"C:\";
 
