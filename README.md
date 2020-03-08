@@ -35,19 +35,19 @@ Run the following commands in a terminal (Command Prompt or PowerShell).
 - To add the *Paste Into File* entry in the File Explorer context menu:
 
    ```powershell
-   PasteIntoFile.exe /reg
+   PasteIntoFile /reg
    ``` 
 
 - To remove the *Paste Into File* entry from the File Explorer context menu:
 
    ```powershell
-   PasteIntoFile.exe /unreg
+   PasteIntoFile /unreg
    ``` 
 
 - To change the default filename format:
 
    ```powershell
-   PasteIntoFile.exe /filename yyyyMMdd_HHmmss
+   PasteIntoFile /filename yyyyMMdd_HHmmss
    ``` 
     
    For more information on the format specifiers, see [Custom date and time format strings](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings).
