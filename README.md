@@ -25,7 +25,7 @@ choco install pasteintofile
    ![Paste As File](PasteIntoFile/menu.png)
    <br/>
 
-1. Choose the filename, extenstion and location, the press the *Save* button:<br/>
+1. Choose the filename, extenstion and location, then press the *Save* button:<br/>
    ![Paste As File](PasteIntoFile/screenshot.png)
 
 ## Configuration
