@@ -20,7 +20,7 @@ choco install pasteintofile
 
 ## Usage
 
-1. Right click in the folder where you want to create the file and choose the *Paste into file* entry from the context menu:
+1. Right click in the folder where you want to create the file and choose the *Paste Into File* entry from the context menu:
 
    ![Paste As File](PasteIntoFile/menu.png)
    <br/>
@@ -32,13 +32,13 @@ choco install pasteintofile
 
 Run the following commands in a terminal (Command Prompt or PowerShell).
 
-- To add the *Paste into file* entry in the File Explorer context menu:
+- To add the *Paste Into File* entry in the File Explorer context menu:
 
    ```powershell
    .\PasteIntoFile.exe /reg
    ``` 
 
-- To remove the *Paste into file* entry from the File Explorer context menu:
+- To remove the *Paste Into File* entry from the File Explorer context menu:
 
    ```powershell
    .\PasteIntoFile.exe /unreg
