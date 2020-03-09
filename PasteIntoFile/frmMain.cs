@@ -17,6 +17,7 @@ namespace PasteAsFile
 {
     public partial class frmMain : Form
     {
+        public const string DEFAULT_FILENAME_FORMAT = "yyyy-MM-dd HH.mm.ss";
         public string CurrentLocation { get; set; }
         public bool IsText { get; set; }
         public frmMain()
@@ -30,11 +31,7 @@ namespace PasteAsFile
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
-            string filename = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\filename", "", null);
-            if (filename == null)
-            {
-                filename = "dd-MM-yyyy HH-mm-ss";
-            }
+            string filename = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\filename", "", null) ?? DEFAULT_FILENAME_FORMAT;
             txtFilename.Text = DateTime.Now.ToString(filename);
             txtCurrentLocation.Text = CurrentLocation ?? @"C:\";
 
