@@ -1,22 +1,54 @@
-Paste Into File
-===========
+# Paste Into File
 
-###Desktop Application to Paste Clipboard Contents into Files
+A Windows desktop application to paste clipboard contents (text and images) into files.
 
-----------------
+## Installation
 
-+ Supports  Any type of Text, Source Code , Images.
-+ Change the current saving location or type it yourself.
-+ Shortcut in Context Menu (Right Click)
-+ to `Unregister` the application and remove the Context Menu Shortcut from your system run the command line as Administrator and run the application with this argument : **`/unreg`**
-+ to manually `Register` it use this argument : **`/reg`**
-+ to change default filename format ("dd-MM-yyyy HH-mm-ss") use for example: **`/filename yyyy-MM-dd_HHmm`** (for more information on the format specifiers, see [Custom date and time format strings](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings)
+### Installing via Chocolatey
 
-### Screenshot of the Application
-![Paste As File](https://raw.githubusercontent.com/EslaMx7/PasteIntoFiles/master/PasteIntoFile/screenshot.png)
+You can use Chocolatey to install *Paste Into File*. If you don't have Chocolatey, you can install it from the [Chocolately Install page](https://chocolatey.org/install). With Chocolatey installed, execute the following command to install *Paste Into File*:
 
-## [Download Now](https://goo.gl/aBlfYQ) (162KB)
+```powershell
+choco install pasteintofile
+``` 
 
-----------------
-+ .NET Framework 4.5 Required
-+ Tested On My Machine (Windows 10)
+### Installing manually
+
+1. Make sure you have _.NET Framework 4.5._ installed in your system
+
+1. Download the executable from [here](https://goo.gl/aBlfYQ) and install it.
+
+## Usage
+
+1. Right click in the folder where you want to create the file and choose the *Paste Into File* entry from the context menu:
+
+   ![Paste As File](PasteIntoFile/menu.png)
+   <br/>
+
+1. Choose the filename, extenstion and location, then press the *Save* button:<br/>
+   ![Paste As File](PasteIntoFile/screenshot.png)
+
+## Configuration
+
+Run the following commands in a terminal (Command Prompt or PowerShell).
+
+- To add the *Paste Into File* entry in the File Explorer context menu:
+
+   ```powershell
+   PasteIntoFile /reg
+   ``` 
+
+- To remove the *Paste Into File* entry from the File Explorer context menu:
+
+   ```powershell
+   PasteIntoFile /unreg
+   ``` 
+
+- To change the default filename format:
+
+   ```powershell
+   PasteIntoFile /filename yyyyMMdd_HHmmss
+   ``` 
+    
+   For more information on the format specifiers, see [Custom date and time format strings](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings).
+
