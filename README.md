@@ -1,3 +1,5 @@
+## 📢 New Version Released: [Info & Download](https://eslamx.page.link/paste-into-file-download) 🔥
+---
 # Paste Into File
 
 A Windows desktop application to paste clipboard contents (text and images) into files.
@@ -12,11 +14,11 @@ You can use Chocolatey to install *Paste Into File*. If you don't have Chocolate
 choco install pasteintofile
 ``` 
 
-### Installing manually
+### Download and Run
 
-1. Make sure you have _.NET Framework 4.5._ installed in your system
+1. Make sure you have _.NET Framework 4.5+_ installed in your system. (_Included in Windows 10_)
 
-1. Download the executable from [here](https://goo.gl/aBlfYQ) and install it.
+2. Download the executable from [here](https://eslamx.page.link/paste-into-file-download) and install it.
 
 ## Usage
 
@@ -25,7 +27,7 @@ choco install pasteintofile
    ![Paste As File](PasteIntoFile/menu.png)
    <br/>
 
-1. Choose the filename, extenstion and location, then press the *Save* button:<br/>
+2. Choose the filename, extenstion and location, then press the *Save* button:<br/>
    ![Paste As File](PasteIntoFile/screenshot.png)
 
 ## Configuration
