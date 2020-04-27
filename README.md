@@ -1,4 +1,4 @@
-## 📢 New Version Released: [Info & Download](https://eslamx.page.link/paste-into-file-download) 🔥
+## 📢 New Version Released: [Info & Download](https://on.eslamx.com/2YcPKdt) 🔥
 ---
 # Paste Into File
 
@@ -18,7 +18,7 @@ choco install pasteintofile
 
 1. Make sure you have _.NET Framework 4.5+_ installed in your system. (_Included in Windows 10_)
 
-2. Download the executable from [here](https://eslamx.page.link/paste-into-file-download) and install it.
+2. Download the executable from [here](https://on.eslamx.com/2YcPKdt) and install it.
 
 ## Usage
 
