@@ -35,6 +35,9 @@ namespace PasteAsFile
             txtFilename.Text = DateTime.Now.ToString(filename);
             txtCurrentLocation.Text = CurrentLocation ?? @"C:\";
 
+            var displayWindow = (bool)PasteIntoFile.Properties.Settings.Default["displayWindow"];
+            cbxDisplayWindow.Checked = displayWindow;
+
             if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Paste Into File\command", "", null) == null)
             {
                 if (MessageBox.Show("Seems that you are running this application for the first time,\nDo you want to Register it with your system Context Menu ?", "Paste Into File", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -43,12 +46,15 @@ namespace PasteAsFile
                 }
             }
 
+
+
             if (Clipboard.ContainsText())
             {
                 lblType.Text = "Text File";
                 comExt.SelectedItem = "txt";
                 IsText = true;
                 txtContent.Text = Clipboard.GetText();
+                autosave();
                 return;
             }
 
@@ -57,6 +63,7 @@ namespace PasteAsFile
                 lblType.Text = "Image";
                 comExt.SelectedItem = "png";
                 imgContent.Image = Clipboard.GetImage();
+                autosave();
                 return;
             }
 
@@ -65,8 +72,21 @@ namespace PasteAsFile
 
 
         }
+        private void autosave()
+        {
+            if (!cbxDisplayWindow.Checked)
+            {
+                save();
+            }
+        }
+
 
         private void btnSave_Click(object sender, EventArgs e)
+        {
+            save();
+        }
+
+        private void save()
         {
             string location = txtCurrentLocation.Text;
             location = location.EndsWith("\\") ? location : location + "\\";
@@ -150,6 +170,12 @@ namespace PasteAsFile
             {
                 btnSave_Click(sender, null);
             }
+        }
+
+        private void cbxDisplayWindow_CheckedChanged(object sender, EventArgs e)
+        {
+            PasteIntoFile.Properties.Settings.Default["displayWindow"] = cbxDisplayWindow.Checked;
+            PasteIntoFile.Properties.Settings.Default.Save();
         }
     }
 }
