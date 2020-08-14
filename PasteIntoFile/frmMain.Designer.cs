@@ -215,11 +215,13 @@
             this.Controls.Add(this.lblType);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Paste Into File";
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.imgContent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -143,5 +143,13 @@ namespace PasteAsFile
 
 
         }
+
+        private void frmMain_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Environment.Exit(0);
+            }
+        }
     }
 }
