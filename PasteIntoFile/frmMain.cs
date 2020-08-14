@@ -143,13 +143,5 @@ namespace PasteAsFile
 
 
         }
-
-        private void txtFilename_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                btnSave_Click(sender, null);
-            }
-        }
     }
 }
