@@ -11,6 +11,8 @@ namespace PasteAsFile
 {
 	static class Program
 	{
+		public static readonly string RegistrySubKey = "Paste Into File";
+
 		/// <summary>
 		/// The main entry point for the application.
 		/// </summary>
@@ -51,7 +53,7 @@ namespace PasteAsFile
 		{
 			try
 			{
-                var key = OpenDirectoryKey().CreateSubKey("shell").CreateSubKey("Paste Into File");
+                var key = OpenDirectoryKey().CreateSubKey("shell").CreateSubKey(RegistrySubKey);
                 key = key.CreateSubKey("filename");
                 key.SetValue("", filename);
 
@@ -69,10 +71,10 @@ namespace PasteAsFile
 			try
 			{
 				var key = OpenDirectoryKey().OpenSubKey(@"Background\shell", true);
-				key.DeleteSubKeyTree("Paste Into File");
+				key.DeleteSubKeyTree(RegistrySubKey);
 
 				key = OpenDirectoryKey().OpenSubKey("shell", true);
-				key.DeleteSubKeyTree("Paste Into File");
+				key.DeleteSubKeyTree(RegistrySubKey);
 
 				MessageBox.Show(Resources.str_message_unregister_context_menu_success, Resources.window_title, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -88,12 +90,14 @@ namespace PasteAsFile
 		{
 			try
 			{
-				var key = OpenDirectoryKey().CreateSubKey(@"Background\shell").CreateSubKey("Paste Into File");
+				var key = OpenDirectoryKey().CreateSubKey(@"Background\shell").CreateSubKey(RegistrySubKey);
+				key.SetValue("", Resources.explorer_context_entry);
 				key.SetValue("Icon", "\"" + Application.ExecutablePath + "\",0");
 				key = key.CreateSubKey("command");
 				key.SetValue("" , "\"" + Application.ExecutablePath + "\" \"%V\"");
 
-				key = OpenDirectoryKey().CreateSubKey("shell").CreateSubKey("Paste Into File");
+				key = OpenDirectoryKey().CreateSubKey("shell").CreateSubKey(RegistrySubKey);
+				key.SetValue("", Resources.explorer_context_entry);
 				key.SetValue("Icon", "\"" + Application.ExecutablePath + "\",0");
 				key = key.CreateSubKey("command");
 				key.SetValue("" , "\"" + Application.ExecutablePath + "\" \"%1\"");
