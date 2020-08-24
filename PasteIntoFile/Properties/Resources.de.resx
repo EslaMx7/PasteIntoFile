@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="str_save" xml:space="preserve">
+        <value>Speichern</value>
+    </data>
+    <data name="str_message_register_filename_success" xml:space="preserve">
+        <value>Dateiname-Vorlage wurde registriert</value>
+    </data>
+    <data name="str_filename" xml:space="preserve">
+        <value>Dateiname</value>
+    </data>
+    <data name="str_extension" xml:space="preserve">
+        <value>Erweiterung</value>
+    </data>
+    <data name="str_file_saved" xml:space="preserve">
+        <value>Gespeichert :)</value>
+    </data>
+    <data name="str_message_first_time" xml:space="preserve">
+        <value>Es scheint als würdest du die Anwendung zum ersten Mal starten. Möchtest du einen Eintrag zum Kontextmenu des Explorers hinzufügen?</value>
+    </data>
+    <data name="str_location" xml:space="preserve">
+        <value>Speicherort</value>
+    </data>
+    <data name="str_select_folder" xml:space="preserve">
+        <value>Speicherort auswählen</value>
+    </data>
+    <data name="str_type_img" xml:space="preserve">
+        <value>Bilddatei</value>
+    </data>
+    <data name="str_type_txt" xml:space="preserve">
+        <value>Textdatei</value>
+    </data>
+    <data name="str_type_unknown" xml:space="preserve">
+        <value>Unbekannte Datei</value>
+    </data>
+    <data name="str_message_register_context_menu_success" xml:space="preserve">
+        <value>Eintrag im Kontextmenu wurde hinzugefügt</value>
+    </data>
+    <data name="str_message_run_as_admin" xml:space="preserve">
+        <value>Bitte die Anwendung als Administrator ausführen!</value>
+    </data>
+    <data name="str_message_unregister_context_menu_success" xml:space="preserve">
+        <value>Eintrag im Kontextmenu wurde entfernt</value>
+    </data>
+    <data name="explorer_context_entry" xml:space="preserve">
+        <value>Einfügen als Datei (Paste Into File)</value>
+    </data>
+    <data name="str_message_help" xml:space="preserve">
+        <value>Paste Into File speichert Texte und Bilder aus der Zwischenablage direkt als Datei.
+      
+--------------------
+
+Komandozeilen-Argumente:
+ /reg           	Fügt den Eintrag dem Kontextmenu hinzu
+ /unreg         	Entfernt den Eintrag aus dem Kontextmenu
+ /filename XXX  	Stellt den Standard Dateinamen ein,
+                	z.B. yyyy-MM-dd_HHmm
+
+--------------------
+
+https://github.com/EslaMx7/PasteIntoFile
+Feedback an: eslamx7@gmail.com
+Danke :)</value>
+    </data>
+</root>
