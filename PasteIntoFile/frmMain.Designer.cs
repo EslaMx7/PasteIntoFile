@@ -43,64 +43,59 @@
             this.lblMe = new System.Windows.Forms.Label();
             this.lblWebsite = new System.Windows.Forms.Label();
             this.lblHelp = new System.Windows.Forms.Label();
+            this.cbxDisplayWindow = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgContent)).BeginInit();
             this.SuspendLayout();
             // 
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(17, 128);
-            this.lblType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblType.Location = new System.Drawing.Point(13, 104);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(40, 17);
+            this.lblType.Size = new System.Drawing.Size(31, 13);
             this.lblType.TabIndex = 6;
             this.lblType.Text = "Type";
             // 
             // imgContent
             // 
-            this.imgContent.Location = new System.Drawing.Point(275, 290);
-            this.imgContent.Margin = new System.Windows.Forms.Padding(4);
+            this.imgContent.Location = new System.Drawing.Point(206, 236);
             this.imgContent.Name = "imgContent";
-            this.imgContent.Size = new System.Drawing.Size(161, 100);
+            this.imgContent.Size = new System.Drawing.Size(121, 81);
             this.imgContent.TabIndex = 2;
             this.imgContent.TabStop = false;
             // 
             // txtContent
             // 
-            this.txtContent.Location = new System.Drawing.Point(16, 290);
-            this.txtContent.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContent.Location = new System.Drawing.Point(12, 236);
             this.txtContent.Multiline = true;
             this.txtContent.Name = "txtContent";
             this.txtContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtContent.Size = new System.Drawing.Size(249, 142);
+            this.txtContent.Size = new System.Drawing.Size(188, 116);
             this.txtContent.TabIndex = 3;
             // 
             // lblFileName
             // 
             this.lblFileName.AutoSize = true;
-            this.lblFileName.Location = new System.Drawing.Point(17, 16);
-            this.lblFileName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFileName.Location = new System.Drawing.Point(13, 13);
             this.lblFileName.Name = "lblFileName";
-            this.lblFileName.Size = new System.Drawing.Size(73, 17);
+            this.lblFileName.Size = new System.Drawing.Size(55, 13);
             this.lblFileName.TabIndex = 4;
             this.lblFileName.Text = "Filename :";
             // 
             // txtFilename
             // 
-            this.txtFilename.Location = new System.Drawing.Point(21, 37);
-            this.txtFilename.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFilename.Location = new System.Drawing.Point(16, 30);
             this.txtFilename.Name = "txtFilename";
-            this.txtFilename.Size = new System.Drawing.Size(244, 22);
+            this.txtFilename.Size = new System.Drawing.Size(184, 20);
             this.txtFilename.TabIndex = 1;
             this.txtFilename.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilename_KeyPress);
             // 
             // lblExt
             // 
             this.lblExt.AutoSize = true;
-            this.lblExt.Location = new System.Drawing.Point(312, 16);
-            this.lblExt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblExt.Location = new System.Drawing.Point(234, 13);
             this.lblExt.Name = "lblExt";
-            this.lblExt.Size = new System.Drawing.Size(77, 17);
+            this.lblExt.Size = new System.Drawing.Size(59, 13);
             this.lblExt.TabIndex = 6;
             this.lblExt.Text = "Extension :";
             // 
@@ -123,19 +118,17 @@
             "bmp",
             "gif",
             "ico"});
-            this.comExt.Location = new System.Drawing.Point(316, 37);
-            this.comExt.Margin = new System.Windows.Forms.Padding(4);
+            this.comExt.Location = new System.Drawing.Point(237, 30);
             this.comExt.Name = "comExt";
-            this.comExt.Size = new System.Drawing.Size(96, 24);
+            this.comExt.Size = new System.Drawing.Size(73, 21);
             this.comExt.TabIndex = 2;
             // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.btnSave.Location = new System.Drawing.Point(144, 117);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Location = new System.Drawing.Point(108, 95);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(180, 37);
+            this.btnSave.Size = new System.Drawing.Size(120, 30);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -143,29 +136,26 @@
             // 
             // txtCurrentLocation
             // 
-            this.txtCurrentLocation.Location = new System.Drawing.Point(21, 89);
-            this.txtCurrentLocation.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCurrentLocation.Location = new System.Drawing.Point(16, 72);
             this.txtCurrentLocation.Name = "txtCurrentLocation";
-            this.txtCurrentLocation.Size = new System.Drawing.Size(339, 22);
+            this.txtCurrentLocation.Size = new System.Drawing.Size(255, 20);
             this.txtCurrentLocation.TabIndex = 3;
             this.txtCurrentLocation.Text = "D:\\";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 68);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(13, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 17);
+            this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Current Location :";
             // 
             // btnBrowseForFolder
             // 
-            this.btnBrowseForFolder.Location = new System.Drawing.Point(369, 86);
-            this.btnBrowseForFolder.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBrowseForFolder.Location = new System.Drawing.Point(277, 70);
             this.btnBrowseForFolder.Name = "btnBrowseForFolder";
-            this.btnBrowseForFolder.Size = new System.Drawing.Size(44, 28);
+            this.btnBrowseForFolder.Size = new System.Drawing.Size(33, 23);
             this.btnBrowseForFolder.TabIndex = 4;
             this.btnBrowseForFolder.Text = "...";
             this.btnBrowseForFolder.UseVisualStyleBackColor = true;
@@ -175,10 +165,9 @@
             // 
             this.lblMe.AutoSize = true;
             this.lblMe.ForeColor = System.Drawing.Color.Gray;
-            this.lblMe.Location = new System.Drawing.Point(267, 165);
-            this.lblMe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMe.Location = new System.Drawing.Point(12, 135);
             this.lblMe.Name = "lblMe";
-            this.lblMe.Size = new System.Drawing.Size(161, 17);
+            this.lblMe.Size = new System.Drawing.Size(123, 13);
             this.lblMe.TabIndex = 12;
             this.lblMe.Text = "© Eslam Hamouda 2014";
             this.lblMe.Click += new System.EventHandler(this.lblMe_Click);
@@ -187,10 +176,9 @@
             // 
             this.lblWebsite.AutoSize = true;
             this.lblWebsite.ForeColor = System.Drawing.Color.Gray;
-            this.lblWebsite.Location = new System.Drawing.Point(16, 165);
-            this.lblWebsite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblWebsite.Location = new System.Drawing.Point(12, 122);
             this.lblWebsite.Name = "lblWebsite";
-            this.lblWebsite.Size = new System.Drawing.Size(81, 17);
+            this.lblWebsite.Size = new System.Drawing.Size(62, 13);
             this.lblWebsite.TabIndex = 13;
             this.lblWebsite.Text = "eslamx.com";
             this.lblWebsite.Click += new System.EventHandler(this.lblWebsite_Click);
@@ -200,19 +188,32 @@
             this.lblHelp.AutoSize = true;
             this.lblHelp.Cursor = System.Windows.Forms.Cursors.Help;
             this.lblHelp.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.lblHelp.Location = new System.Drawing.Point(393, 126);
-            this.lblHelp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHelp.Location = new System.Drawing.Point(295, 102);
             this.lblHelp.Name = "lblHelp";
-            this.lblHelp.Size = new System.Drawing.Size(18, 21);
+            this.lblHelp.Size = new System.Drawing.Size(15, 17);
             this.lblHelp.TabIndex = 8;
             this.lblHelp.Text = "?";
             this.lblHelp.Click += new System.EventHandler(this.lblHelp_Click);
             // 
+            // cbxDisplayWindow
+            // 
+            this.cbxDisplayWindow.AutoSize = true;
+            this.cbxDisplayWindow.Checked = true;
+            this.cbxDisplayWindow.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxDisplayWindow.Location = new System.Drawing.Point(206, 131);
+            this.cbxDisplayWindow.Name = "cbxDisplayWindow";
+            this.cbxDisplayWindow.Size = new System.Drawing.Size(118, 17);
+            this.cbxDisplayWindow.TabIndex = 14;
+            this.cbxDisplayWindow.Text = "Display this window";
+            this.cbxDisplayWindow.UseVisualStyleBackColor = true;
+            this.cbxDisplayWindow.CheckedChanged += new System.EventHandler(this.cbxDisplayWindow_CheckedChanged);
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 192);
+            this.ClientSize = new System.Drawing.Size(334, 156);
+            this.Controls.Add(this.cbxDisplayWindow);
             this.Controls.Add(this.lblHelp);
             this.Controls.Add(this.lblWebsite);
             this.Controls.Add(this.lblMe);
@@ -229,7 +230,6 @@
             this.Controls.Add(this.lblType);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -257,6 +257,7 @@
         private System.Windows.Forms.Label lblMe;
         private System.Windows.Forms.Label lblWebsite;
         private System.Windows.Forms.Label lblHelp;
+        private System.Windows.Forms.CheckBox cbxDisplayWindow;
     }
 }
 
