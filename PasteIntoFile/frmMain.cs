@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -34,6 +35,9 @@ namespace PasteAsFile
             string filename = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\filename", "", null) ?? DEFAULT_FILENAME_FORMAT;
             txtFilename.Text = DateTime.Now.ToString(filename);
             txtCurrentLocation.Text = CurrentLocation ?? @"C:\";
+
+            var appVersion = Assembly.GetExecutingAssembly().GetName().Version;
+            Text += String.Format(" v{0}", appVersion);
 
             if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Paste Into File\command", "", null) == null)
             {
@@ -138,7 +142,7 @@ namespace PasteAsFile
             msg += "\nto Unregister the application use this argument : /unreg\n";
             msg += "\nTo change the format of the default filename, use this argument: /filename yyyy-MM-dd_HHmm\n";
             msg += "\n--------------------\nSend Feedback to : eslamx7@gmail.com\n\nThanks :)";
-            MessageBox.Show(msg, "Paste As File Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(msg, "Paste Into File Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
