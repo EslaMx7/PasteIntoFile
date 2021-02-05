@@ -180,7 +180,7 @@
             this.lblMe.Name = "lblMe";
             this.lblMe.Size = new System.Drawing.Size(161, 17);
             this.lblMe.TabIndex = 12;
-            this.lblMe.Text = "© Eslam Hamouda 2014";
+            this.lblMe.Text = "© Eslam Hamouda 2021";
             this.lblMe.Click += new System.EventHandler(this.lblMe_Click);
             // 
             // lblWebsite
