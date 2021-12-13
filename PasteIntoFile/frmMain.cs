@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PasteIntoFile.Properties;
 
 namespace PasteAsFile
 {
@@ -31,13 +32,13 @@ namespace PasteAsFile
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
-            string filename = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\filename", "", null) ?? DEFAULT_FILENAME_FORMAT;
+            string filename = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\"+Program.RegistrySubKey+@"\filename", "", null) ?? DEFAULT_FILENAME_FORMAT;
             txtFilename.Text = DateTime.Now.ToString(filename);
             txtCurrentLocation.Text = CurrentLocation ?? @"C:\";
 
-            if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Paste Into File\command", "", null) == null)
+            if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\"+Program.RegistrySubKey+@"\command", "", null) == null)
             {
-                if (MessageBox.Show("Seems that you are running this application for the first time,\nDo you want to Register it with your system Context Menu ?", "Paste Into File", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show(Resources.str_message_first_time, Resources.window_title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Program.RegisterApp();
                 }
@@ -45,7 +46,7 @@ namespace PasteAsFile
 
             if (Clipboard.ContainsText())
             {
-                lblType.Text = "Text File";
+                lblType.Text = Resources.str_type_txt;
                 comExt.SelectedItem = "txt";
                 IsText = true;
                 txtContent.Text = Clipboard.GetText();
@@ -54,13 +55,13 @@ namespace PasteAsFile
 
             if (Clipboard.ContainsImage())
             {
-                lblType.Text = "Image";
+                lblType.Text = Resources.str_type_img;
                 comExt.SelectedItem = "png";
                 imgContent.Image = Clipboard.GetImage();
                 return;
             }
 
-            lblType.Text = "Unknown File";
+            lblType.Text = Resources.str_type_unknown;
             btnSave.Enabled = false;
 
 
@@ -75,7 +76,6 @@ namespace PasteAsFile
             {
 
                 File.WriteAllText(location + filename, txtContent.Text, Encoding.UTF8);
-                this.Text += " : File Saved :)";
             }
             else
             {
@@ -101,8 +101,9 @@ namespace PasteAsFile
                         break;
                 }
 
-                this.Text += " : Image Saved :)";
             }
+            
+            this.btnSave.Text = Resources.str_file_saved;
 
             Task.Factory.StartNew(() =>
             {
@@ -114,7 +115,7 @@ namespace PasteAsFile
         private void btnBrowseForFolder_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
-            fbd.Description = "Select a folder for saving this file ";
+            fbd.Description = Resources.str_select_folder;
             if (fbd.ShowDialog() == DialogResult.OK)
             {
                 txtCurrentLocation.Text = fbd.SelectedPath;
@@ -133,12 +134,7 @@ namespace PasteAsFile
 
         private void lblHelp_Click(object sender, EventArgs e)
         {
-            string msg = "Paste Into File helps you paste any text or images in your system clipboard into a file directly instead of creating new file yourself";
-            msg += "\n--------------------\nTo Register the application to your system Context Menu run the program as Administrator with this argument : /reg";
-            msg += "\nto Unregister the application use this argument : /unreg\n";
-            msg += "\nTo change the format of the default filename, use this argument: /filename yyyy-MM-dd_HHmm\n";
-            msg += "\n--------------------\nSend Feedback to : eslamx7@gmail.com\n\nThanks :)";
-            MessageBox.Show(msg, "Paste As File Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(Resources.str_message_help, Resources.window_title, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 

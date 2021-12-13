@@ -114,4 +114,71 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="str_message_register_filename_success" xml:space="preserve">
+    <value>Filename-template has been registered</value>
+  </data>
+  <data name="str_save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="str_filename" xml:space="preserve">
+    <value>Filename</value>
+  </data>
+  <data name="str_extension" xml:space="preserve">
+    <value>Extension</value>
+  </data>
+  <data name="str_location" xml:space="preserve">
+    <value>Current Location</value>
+  </data>
+  <data name="str_ellipsis" xml:space="preserve">
+    <value>…</value>
+  </data>
+  <data name="window_title" xml:space="preserve">
+    <value>Paste Into File</value>
+  </data>
+  <data name="str_message_unregister_context_menu_success" xml:space="preserve">
+    <value>Explorer context menu entry has been removed</value>
+  </data>
+  <data name="str_message_run_as_admin" xml:space="preserve">
+    <value>Please run the application as Administrator!</value>
+  </data>
+  <data name="str_message_register_context_menu_success" xml:space="preserve">
+    <value>Explorer context menu entry has been added</value>
+  </data>
+  <data name="explorer_context_entry" xml:space="preserve">
+    <value>Paste Into File</value>
+  </data>
+  <data name="str_message_first_time" xml:space="preserve">
+    <value>It seems that you are running this application for the first time,
+do you want to add an entry to the explorer context menu?</value>
+  </data>
+  <data name="str_type_txt" xml:space="preserve">
+    <value>Text file</value>
+  </data>
+  <data name="str_type_img" xml:space="preserve">
+    <value>Image file</value>
+  </data>
+  <data name="str_type_unknown" xml:space="preserve">
+    <value>Unknown file</value>
+  </data>
+  <data name="str_file_saved" xml:space="preserve">
+    <value>File saved :)</value>
+  </data>
+  <data name="str_select_folder" xml:space="preserve">
+    <value>Select a folder for saving this file </value>
+  </data>
+  <data name="str_message_help" xml:space="preserve">
+    <value>Paste Into File helps you paste any text or images in your system clipboard into a file directly instead of creating new file yourself
+      
+--------------------
+      
+To Register the application to your system context menu run the program as administrator with this argument : /reg
+to Unregister the application use this argument : /unreg
+To change the format of the default filename, use this argument: /filename yyyy-MM-dd_HHmm
+
+--------------------
+
+https://github.com/EslaMx7/PasteIntoFile
+Send Feedback to: eslamx7@gmail.com
+Thanks :)</value>
+  </data>
 </root>
