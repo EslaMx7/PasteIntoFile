@@ -20,23 +20,40 @@ namespace PasteAsFile
 			Application.SetCompatibleTextRenderingDefault(false);
 			if (args.Length>0)
 			{
-				if (args[0] == "/reg")
+				if (string.Equals(args[0], "/reg", StringComparison.CurrentCultureIgnoreCase))
 				{
 					RegisterApp();
 					return;
 				}
-				else if (args[0] == "/unreg")
+				else if (string.Equals(args[0], "/unreg", StringComparison.CurrentCultureIgnoreCase))
 				{
 					UnRegisterApp();
 					return;
 				}
-                else if (args[0] == "/filename")
-                {
-                    if (args.Length > 1) {
-                        RegisterFilename(args[1]);
-                    }
-                    return;
-                }
+				else if (string.Equals(args[0], "/filename", StringComparison.CurrentCultureIgnoreCase))
+				{
+					if (args.Length > 1)
+					{
+						RegisterFilename(args[1]);
+					}
+					return;
+				}
+				else if (string.Equals(args[0], "/TextSubDir", StringComparison.CurrentCultureIgnoreCase))
+				{
+					if (args.Length > 1)
+					{
+						RegisterTextSubDir(args[1]);
+					}
+					return;
+				}
+				else if (string.Equals(args[0], "/ImageSubDir", StringComparison.CurrentCultureIgnoreCase))
+					{
+					if (args.Length > 1)
+					{
+						RegisterImageSubDir(args[1]);
+					}
+					return;
+				}
 				Application.Run(new frmMain(args[0]));
 			}
 			else
@@ -46,20 +63,56 @@ namespace PasteAsFile
 			
 		}
 
+		public static void ShowMessageToRunAsAdmin(Exception ex)
+		{
+			MessageBox.Show(ex.Message + "\nPlease run the application as Administrator !", "Paste As File", MessageBoxButtons.OK, MessageBoxIcon.Error);
+		}
+
 		public static void RegisterFilename(string filename)
 		{
 			try
 			{
-                var key = OpenDirectoryKey().CreateSubKey("shell").CreateSubKey("Paste Into File");
-                key = key.CreateSubKey("filename");
-                key.SetValue("", filename);
+				var key = OpenDirectoryKey().CreateSubKey("shell").CreateSubKey("Paste Into File");
+				key = key.CreateSubKey("filename");
+				key.SetValue("", filename);
 
-                MessageBox.Show("Filename has been registered with your system", "Paste Into File", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				MessageBox.Show("Filename has been registered with your system", "Paste Into File", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 			catch (Exception ex)
 			{
-				//throw;
-				MessageBox.Show(ex.Message + "\nPlease run the application as Administrator !", "Paste As File", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				ShowMessageToRunAsAdmin(ex);
+			}
+		}
+
+		public static void RegisterTextSubDir(string TextSubDir)
+		{
+			try
+			{
+				var key = OpenDirectoryKey().CreateSubKey("shell").CreateSubKey("Paste Into File");
+				key = key.CreateSubKey("TextSubDir");
+				key.SetValue("", TextSubDir);
+
+				MessageBox.Show("TextSubDir has been registered with your system", "Paste Into File", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			catch (Exception ex)
+			{
+				ShowMessageToRunAsAdmin(ex);
+			}
+		}
+
+		public static void RegisterImageSubDir(string ImageSubDir)
+		{
+			try
+			{
+				var key = OpenDirectoryKey().CreateSubKey("shell").CreateSubKey("Paste Into File");
+				key = key.CreateSubKey("ImageSubDir");
+				key.SetValue("", ImageSubDir);
+
+				MessageBox.Show("ImageSubDir has been registered with your system", "Paste Into File", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			catch (Exception ex)
+			{
+				ShowMessageToRunAsAdmin(ex);
 			}
 		}
 
@@ -78,8 +131,7 @@ namespace PasteAsFile
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message + "\nPlease run the application as Administrator !", "Paste Into File", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				
+				ShowMessageToRunAsAdmin(ex);
 			}
 		}
 
@@ -101,8 +153,7 @@ namespace PasteAsFile
 			}
 			catch (Exception ex)
 			{
-				//throw;
-				MessageBox.Show(ex.Message + "\nPlease run the application as Administrator !", "Paste As File", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				ShowMessageToRunAsAdmin(ex);
 			}
 		}
 
