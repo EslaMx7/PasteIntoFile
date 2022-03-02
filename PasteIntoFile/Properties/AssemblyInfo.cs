@@ -9,9 +9,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Paste Clipboard Contents Into Files")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EslaMxSoft 2022")]
-[assembly: AssemblyProduct("PasteIntoFile + David Maisonave Enhancements")]
+[assembly: AssemblyProduct("PasteIntoFile")]
 [assembly: AssemblyCopyright("Copyright © EslaMxSoft 2022")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("EslaMxSoft 2022")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
