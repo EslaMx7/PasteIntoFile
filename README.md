@@ -31,8 +31,8 @@ choco install pasteintofile
    ![Paste As File](PasteIntoFile/screenshot.png)
 
 ### Combination Key Usage
-* To create a file automatically (without a windows prompt), hold **CTRL** key while choosing **[Paste Into File]** in the context menu.
-* To create the file in a default sub folder under the current directory, hold **SHIFT** key while choosing **[Paste Into File]** in the context menu.
+* To create a file automatically (without a windows prompt), hold **SHIFT** key while choosing **[Paste Into File]** in the context menu.
+* To create the file in a default sub folder under the current directory, hold **CTRL** key while choosing **[Paste Into File]** in the context menu.
 * Holding both keys (**CTRL+SHIFT**) while choosing **[Paste Into File]** will create the text file automatically in the default sub folder associated with the file type.
   * The default sub folder for a text file is Text, and the default folder for an image file is Image.
   * The default sub folders can be changed using command line options. See Configuration section for details.
