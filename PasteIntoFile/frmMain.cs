@@ -191,8 +191,8 @@ namespace PasteAsFile
 			msg += "To change the format of the default filename, use argument:\n/filename yyyy-MM-dd_HHmm\n";
 			msg += "-----------------------------------------------------------------\n";
 
-			msg += "To create a file automatically without a window prompt, hold ctrl key while selecting 'Paste Into File'\n";
-			msg += "To add a default sub folder to 'Current Location', hold shift key while selecting 'Paste Into File'.   ";
+			msg += "To create a file automatically without a window prompt, hold shift key while selecting 'Paste Into File'\n";
+			msg += "To add a default sub folder to 'Current Location', hold ctrl key while selecting 'Paste Into File'.   ";
 			msg += "The default sub folder for a text file is Text, and the default sub folder for an image file is Image.\n\n";
 			msg += "To change the default Text Sub Folder, use argument:\n/TextSubDir MyDefaultTextFolder\n";
 			msg += "To change the default Image Sub Folder, use argument:\n/ImageSubDir MyImgDir\n";
