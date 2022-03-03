@@ -79,9 +79,9 @@ namespace PasteAsFile
                 comExt.SelectedItem = "txt";
                 IsText = true;
 				txtContent.Text = Clipboard.GetText();
-				if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
-					txtCurrentLocation.Text = txtCurrentLocation.Text + @"\" + TextSubDir;
 				if ((Control.ModifierKeys & Keys.Control) == Keys.Control)
+					txtCurrentLocation.Text = txtCurrentLocation.Text + @"\" + TextSubDir;
+				if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
 					Save_Action(0);
 				return;
             }
@@ -98,9 +98,9 @@ namespace PasteAsFile
 				});
                 comExt.SelectedItem = "png";
 				imgContent.Image = Clipboard.GetImage();
-				if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
-					txtCurrentLocation.Text = txtCurrentLocation.Text + @"\" + ImageSubDir;
 				if ((Control.ModifierKeys & Keys.Control) == Keys.Control)
+					txtCurrentLocation.Text = txtCurrentLocation.Text + @"\" + ImageSubDir;
+				if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
 					Save_Action(0);
                 return;
             }
