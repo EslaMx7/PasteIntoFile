@@ -17,8 +17,6 @@ namespace PasteAsFile
 {
     public partial class frmMain : Form
     {
-		public const string DEFAULT_TEXT_SUBFOLDER = "Text";
-		public const string DEFAULT_IMAGE_SUBFOLDER = "Image";
 		public const string DEFAULT_FILENAME_FORMAT = "yyyy-MM-dd HH.mm.ss";
 		public string CurrentLocation { get; set; }
 		public bool IsText { get; set; }
@@ -33,11 +31,18 @@ namespace PasteAsFile
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
-			string TextSubDir = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\TextSubDir", "", null) ?? DEFAULT_TEXT_SUBFOLDER;
-			string ImageSubDir = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\ImageSubDir", "", null) ?? DEFAULT_IMAGE_SUBFOLDER;
 			string filename = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\filename", "", null) ?? DEFAULT_FILENAME_FORMAT;
 			txtFilename.Text = DateTime.Now.ToString(filename);
-            txtCurrentLocation.Text = CurrentLocation ?? @"C:\";
+			txtCurrentLocation.Text = CurrentLocation ?? @"C:\";
+			const string DEFAULT_TEXT_SUBFOLDER = "Text";
+			const string DEFAULT_IMAGE_SUBFOLDER = "Image";
+			string TextSubDir = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\TextSubDir", "", null) ?? DEFAULT_TEXT_SUBFOLDER;
+			string ImageSubDir = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\ImageSubDir", "", null) ?? DEFAULT_IMAGE_SUBFOLDER;
+			if ((Control.ModifierKeys & Keys.Control) == Keys.Control)
+			{
+				string SubDir = (Clipboard.ContainsText()) ? TextSubDir : ImageSubDir;
+				txtCurrentLocation.Text = (SubDir.IndexOf(":") > 0) ? SubDir : txtCurrentLocation.Text + @"\" + SubDir;
+			}
 
 			if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Paste Into File\command", "", null) == null)
             {
@@ -79,8 +84,6 @@ namespace PasteAsFile
                 comExt.SelectedItem = "txt";
                 IsText = true;
 				txtContent.Text = Clipboard.GetText();
-				if ((Control.ModifierKeys & Keys.Control) == Keys.Control)
-					txtCurrentLocation.Text = txtCurrentLocation.Text + @"\" + TextSubDir;
 				if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
 					Save_Action(0);
 				return;
@@ -98,8 +101,6 @@ namespace PasteAsFile
 				});
                 comExt.SelectedItem = "png";
 				imgContent.Image = Clipboard.GetImage();
-				if ((Control.ModifierKeys & Keys.Control) == Keys.Control)
-					txtCurrentLocation.Text = txtCurrentLocation.Text + @"\" + ImageSubDir;
 				if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
 					Save_Action(0);
                 return;
