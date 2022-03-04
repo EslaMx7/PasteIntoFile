@@ -107,22 +107,6 @@
             // comExt
             // 
             this.comExt.FormattingEnabled = true;
-            this.comExt.Items.AddRange(new object[] {
-            "txt",
-            "html",
-            "js",
-            "css",
-            "csv",
-            "json",
-            "cs",
-            "cpp",
-            "java",
-            "php",
-            "png",
-            "jpg",
-            "bmp",
-            "gif",
-            "ico"});
             this.comExt.Location = new System.Drawing.Point(316, 37);
             this.comExt.Margin = new System.Windows.Forms.Padding(4);
             this.comExt.Name = "comExt";
@@ -257,6 +241,7 @@
         private System.Windows.Forms.Label lblMe;
         private System.Windows.Forms.Label lblWebsite;
         private System.Windows.Forms.Label lblHelp;
-    }
+	}
 }
+
 
