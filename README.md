@@ -73,5 +73,13 @@ Run the following commands in a terminal (Command Prompt or PowerShell).
    PasteIntoFile /ImageSubDir MyImgDir
    ``` 
     
+
+- To change the default path to a specific folder use a fully qualified path having a **drive** letter:
+   ```powershell
+   PasteIntoFile /ImageSubDir C:\MyProject\Screenshots
+   PasteIntoFile /TextSubDir C:\MyProject\SourceCode
+   ``` 
+ 
+    
    For more information on the format specifiers, see [Custom date and time format strings](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings).
 
