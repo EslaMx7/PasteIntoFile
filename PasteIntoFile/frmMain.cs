@@ -36,11 +36,11 @@ namespace PasteAsFile
 			txtCurrentLocation.Text = CurrentLocation ?? @"C:\";
 			const string DEFAULT_TEXT_SUBFOLDER = "Text";
 			const string DEFAULT_IMAGE_SUBFOLDER = "Image";
-			string TextSubDir = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\TextSubDir", "", null) ?? DEFAULT_TEXT_SUBFOLDER;
-			string ImageSubDir = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\ImageSubDir", "", null) ?? DEFAULT_IMAGE_SUBFOLDER;
+			string TextDefaultDir = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\TextDefaultDir", "", null) ?? DEFAULT_TEXT_SUBFOLDER;
+			string ImageDefaultDir = (string)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Classes\Directory\shell\Paste Into File\ImageDefaultDir", "", null) ?? DEFAULT_IMAGE_SUBFOLDER;
 			if ((Control.ModifierKeys & Keys.Control) == Keys.Control)
 			{
-				string SubDir = (Clipboard.ContainsText()) ? TextSubDir : ImageSubDir;
+				string SubDir = (Clipboard.ContainsText()) ? TextDefaultDir : ImageDefaultDir;
 				txtCurrentLocation.Text = (SubDir.IndexOf(":") > 0) ? SubDir : txtCurrentLocation.Text + @"\" + SubDir;
 			}
 
@@ -195,8 +195,8 @@ namespace PasteAsFile
 			msg += "To create a file automatically without a window prompt, hold shift key while selecting 'Paste Into File'\n";
 			msg += "To add a default sub folder to 'Current Location', hold ctrl key while selecting 'Paste Into File'.   ";
 			msg += "The default sub folder for a text file is Text, and the default sub folder for an image file is Image.\n\n";
-			msg += "To change the default Text Sub Folder, use argument:\n/TextSubDir MyDefaultTextFolder\n";
-			msg += "To change the default Image Sub Folder, use argument:\n/ImageSubDir MyImgDir\n";
+			msg += "To change the default Text Sub Folder, use argument:\n/TextDefaultDir MyDefaultTextFolder\n";
+			msg += "To change the default Image Sub Folder, use argument:\n/ImageDefaultDir MyImgDir\n";
 			msg += "\n--------------------\nSend Feedback to : eslamx7@gmail.com\n\nThanks :)";
             MessageBox.Show(msg, "Paste As File Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
