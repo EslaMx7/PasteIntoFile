@@ -63,21 +63,21 @@ Run the following commands in a terminal (Command Prompt or PowerShell).
 - To change the default **Text** Sub Folder:
 
    ```powershell
-   PasteIntoFile /TextSubDir MyDefaultTextFolder
+   PasteIntoFile /TextDefaultDir MyDefaultTextFolder
    ``` 
     
 
 - To change the default **Image** Sub Folder:
 
    ```powershell
-   PasteIntoFile /ImageSubDir MyImgDir
+   PasteIntoFile /ImageDefaultDir MyImgDir
    ``` 
     
 
 - To change the default path to a specific folder use a fully qualified path having a **drive** letter:
    ```powershell
-   PasteIntoFile /ImageSubDir C:\MyProject\Screenshots
-   PasteIntoFile /TextSubDir C:\MyProject\SourceCode
+   PasteIntoFile /ImageDefaultDir C:\MyProject\Screenshots
+   PasteIntoFile /TextDefaultDir C:\MyProject\SourceCode
    ``` 
  
     
